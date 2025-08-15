@@ -5,27 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Login</title>
     <link rel="stylesheet" href="estilos/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=key"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=password"
+    />
   </head>
   <body>
     <main class="container">
+      <img src="imagens/metal.jpg" alt="">
+      <!-- TEXTO -->
       <h1>Login</h1>
       <p>
         Seja bem vindo(a) novamente. Faça login para acessar sua conta e poder
         fazer as configurações no seu ambiente.
       </p>
-      <form action="get">
-        <div class="input-box">
-          <label for="email">Digite seu email</label>
-          <input type="email" name="email" id="email" /> <br />
+      <!-- TEXTO -->
+
+      <form action="post">
+        <!-- INPUT LOGIN -->
+        <div class="login-box">
+          <label for="email"
+            ><span class="material-symbols-outlined"> mail </span>
+          </label>
+          <input
+            size="24"
+            class="login"
+            type="email"
+            name="email"
+            id="email"
+          /><br />
         </div>
 
-        <div class="input-box">
-          <label for="senha">senha</label>
-          <input type="password" name="senha" id="senha" />
+        <div class="login-box">
+          <label for="senha">
+            <span class="material-symbols-outlined"> key </span>
+          </label>
+          <input
+            size="24"
+            class="login"
+            type="password"
+            name="senha"
+            id="senha"
+          />
         </div>
+        <!-- INPUT LOGIN -->
 
-        <input type="submit" value="Entrar" />
-        <input type="reset" value="Esqueci minha senha" />
+        <!-- BOTÕES -->
+        <input id="botao-login" type="submit" value="Entrar" /><br />
+        <button id="forget-pass">
+          Esqueci minha senha
+          <span id="icon-reset" class="material-symbols-outlined"> mail </span>
+        </button>
+
+        <!-- BOTÕES -->
       </form>
     </main>
   </body>
