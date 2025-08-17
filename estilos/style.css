@@ -7,17 +7,19 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
+body,
+html {
   background-color: #332f2b;
+  height: 100vh;
 }
 
-img {
-  position: relative;
-  width: 300px;
-  height: 250px;
-  right: 10px;
-  bottom: 10px;
+div#imagem {
+  background: url(../imagens/metal.jpg);
+  height: 200px;
   border-radius: 20px 20px 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 main {
@@ -25,23 +27,28 @@ main {
   background-color: white;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
   width: 300px;
-  padding: 10px;
   border-radius: 20px;
   box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.288);
+  height: 550px;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+  transition-timing-function: ease;
 }
 
 main h1 {
   text-align: center;
+  margin: 10px 0px;
 }
 
 main p {
-  margin: 10px;
   font-size: 0.93em;
-  text-align: justify;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+div#formulario {
+  display: block;
 }
 
 div.login-box {
@@ -49,7 +56,12 @@ div.login-box {
   border-radius: 10px;
   color: white;
   padding: 3px;
-  margin-top: 5px;
+  margin: 3px 10px 0px 10px;
+}
+
+input#email,
+input#senha {
+  width: calc(100% - 40px);
 }
 
 input.login {
@@ -57,26 +69,40 @@ input.login {
   border: none;
   border-radius: 10px;
 }
+input.login:focus-within {
+  background-color: #ffdaaa;
+  transition: 0.2s;
+}
 
 input#botao-login,
 button#forget-pass {
   width: 100%;
   padding: 10px;
   margin-top: 3px;
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 input#botao-login {
   background-color: #c79048;
   border: none;
 }
+input#botao-login:hover {
+  background-color: #a36425;
+}
+
 button#forget-pass {
   border: 1px solid #c79048;
   padding: 0px;
+  margin-bottom: 15px;
+}
+button#forget-pass:hover {
+  background-color: #474747;
+  color: white;
 }
 
 span#icon-reset {
-  color: #6b5e51;
+  color: #a36425;
   font-size: 2em;
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Login</title>
     <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/media.css" />
 
     <link
       rel="stylesheet"
@@ -22,7 +23,7 @@
   </head>
   <body>
     <main class="container">
-      <img src="imagens/metal.jpg" alt="">
+      <div id="imagem"></div>
       <!-- TEXTO -->
       <h1>Login</h1>
       <p>
@@ -31,44 +32,57 @@
       </p>
       <!-- TEXTO -->
 
-      <form action="post">
-        <!-- INPUT LOGIN -->
-        <div class="login-box">
-          <label for="email"
-            ><span class="material-symbols-outlined"> mail </span>
-          </label>
-          <input
-            size="24"
-            class="login"
-            type="email"
-            name="email"
-            id="email"
-          /><br />
-        </div>
+      <div id="formulario">
+        <form action="cadastro.php" method="post" autocomplete="on">
+          <!-- INPUT LOGIN -->
+          <div class="login-box">
+            <label for="email"
+              ><span class="material-symbols-outlined"> mail </span>
+            </label>
+            <input
+              class="login"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Seu E-Mail"
+              autocomplete="email"
+              maxlenght="30"
+              required
+            /><br />
+          </div>
 
-        <div class="login-box">
-          <label for="senha">
-            <span class="material-symbols-outlined"> key </span>
-          </label>
-          <input
-            size="24"
-            class="login"
-            type="password"
-            name="senha"
-            id="senha"
-          />
-        </div>
-        <!-- INPUT LOGIN -->
+          <div class="login-box">
+            <label for="senha">
+              <span class="material-symbols-outlined"> key </span>
+            </label>
+            <input
+              class="login"
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Sua Senha"
+              autocomplete="current-password"
+              minlength="8"
+              maxlength="20"
+              required
+            />
+          </div>
+          <!-- INPUT LOGIN -->
 
-        <!-- BOTÕES -->
-        <input id="botao-login" type="submit" value="Entrar" /><br />
-        <button id="forget-pass">
-          Esqueci minha senha
-          <span id="icon-reset" class="material-symbols-outlined"> mail </span>
-        </button>
+          <!-- BOTÕES -->
+          <div style="background-color: white" class="login-box">
+            <input id="botao-login" type="submit" value="Entrar" /><br />
+            <button id="forget-pass">
+              Esqueci minha senha
+              <span id="icon-reset" class="material-symbols-outlined">
+                mail
+              </span>
+            </button>
+          </div>
 
-        <!-- BOTÕES -->
-      </form>
+          <!-- BOTÕES -->
+        </form>
+      </div>
     </main>
   </body>
 </html>
